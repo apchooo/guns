@@ -2,6 +2,7 @@
 To start the app:
 
 $ gunicorn wsgi:app -k gevent -w 2
+
 -w 2 signifies the number of workers
 
 Then you can send the POST requests.
