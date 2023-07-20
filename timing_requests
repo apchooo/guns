@@ -1,0 +1,77 @@
+Synchronous Python app
+Request 1 took 0.43 seconds
+Request 2 took 0.33 seconds
+Request 3 took 0.33 seconds
+Request 4 took 0.34 seconds
+Request 5 took 0.32 seconds
+...
+Request 90 took 0.34 seconds
+Request 91 took 0.43 seconds
+Request 92 took 0.35 seconds
+Request 93 took 0.35 seconds
+Request 94 took 0.36 seconds
+Request 95 took 0.38 seconds
+Request 96 took 0.37 seconds
+Request 97 took 0.34 seconds
+Request 98 took 0.36 seconds
+Request 99 took 0.40 seconds
+Request 100 took 0.38 seconds
+
+Received 100 responses in 37.80 seconds
+
+Python + NestJS (NestJS is an asynchronous app but here it was tested with consecutive POST requests)
+Request 1 took 7.20 seconds
+Request 2 took 5.54 seconds
+Request 3 took 4.56 seconds
+Request 4 took 5.05 seconds
+Request 5 took 5.44 seconds
+...
+Request 90 took 4.42 seconds
+Request 91 took 4.42 seconds
+Request 92 took 4.46 seconds
+Request 93 took 4.84 seconds
+Request 94 took 4.35 seconds
+Request 95 took 4.52 seconds
+Request 96 took 4.41 seconds
+Request 97 took 4.41 seconds
+Request 98 took 4.45 seconds
+Request 99 took 4.45 seconds
+Request 100 took 4.89 seconds
+
+Received 100 responses in 452.59 seconds
+
+
+ASYNCH timing
+Python + NestJS (3 workers as only 4 cores available)
+Received 3 responses in 10.23 seconds
+Received 30 responses in 80.39 seconds
+Received 100 responses in 269.11 seconds
+269.11 seconds is 40% decrease in processing time compared to sync 452.59 seconds
+
+ASYNCH Python (3 workers)
+Received 3 responses in 1.07 seconds
+Received 30 responses in 10.05 seconds
+Received 100 responses in 34.98 seconds
+
+Received 100 responses in 25.42 seconds (2 workers)
+Received 100 responses in 28.52 seconds (1 worker)
+
+Fastest option with 2 workers 25.42 seconds is 33% decrease in processing time compared to sync 37.80 seconds.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
